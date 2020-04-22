@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:sushi_delivery/customIcons/custom_icons_icons.dart';
-import 'package:sushi_delivery/customIcons/socicons_icons.dart';
+import 'package:flutter/rendering.dart';
+
 import 'package:sushi_delivery/customCorlors/customColor.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -14,6 +13,141 @@ final _scaffordKey = GlobalKey<ScaffoldState>();
 final barColor = const Color(0xFFAE1438);
 
 class _MyHomePageState extends State<MyHomePage> {
+  Widget productfirt() {
+    return Container(
+      height: 130,
+      width: 120,
+      child: Card(
+        color: CustomColors.cardColor,
+        elevation: 5,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              height: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: AssetImage('images/makisushi.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Sushi Dai Tsujili',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Bitter',
+                fontSize: 14,
+              ),
+            ),
+            Text(
+              r'$25',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Bitter',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget productSecond() {
+    return Container(
+      height: 130,
+      width: 120,
+      child: Card(
+        color: CustomColors.cardColor,
+        elevation: 5,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              height: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: AssetImage('images/sushi2.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Sushi Dai Tsujili',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Bitter',
+                fontSize: 14,
+              ),
+            ),
+            Text(
+              r'$25',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Bitter',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget productThird() {
+    return Container(
+      height: 130,
+      width: 120,
+      child: Card(
+        color: CustomColors.cardColor,
+        elevation: 5,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              height: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: DecorationImage(
+                  image: AssetImage('images/sushi3.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Sushi Dai Tsujili',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Bitter',
+                fontSize: 14,
+              ),
+            ),
+            Text(
+              r'$25',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Bitter',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: 50,
+              height: 60,
               color: CustomColors.appBarColor,
               child: ListView(
                 padding: EdgeInsets.all(8),
@@ -97,7 +231,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+              height: 200,
+              color: CustomColors.appBarColor,
+              child: ListView(
+                padding: EdgeInsets.all(8),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  productfirt(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  productSecond(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  productThird(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
