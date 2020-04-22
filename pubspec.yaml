@@ -61,7 +61,7 @@ flutter:
   fonts:
     - family: Socicons
       fonts:
-        - asset: fonts/Socicons-Regular.ttf
+        - asset: fonts/Socicons.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
