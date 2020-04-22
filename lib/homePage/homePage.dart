@@ -251,9 +251,78 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.all(10),
+                  child: Text(
+                    'LATEST MEALS',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Bitter'),
+                  ),
+                ),
+              ],
+            ),
+            Expanded(
+                child: Column(
+              children: <Widget>[
+                Container(
+                  height: 100,
+                  color: CustomColors.appBarColor,
+                  child: Card(
+                    color: CustomColors.cardColor,
+                    margin: EdgeInsets.all(10),
+                    elevation: 5,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                            margin: EdgeInsets.all(5),
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                image: AssetImage('images/makisushi.jpg'),
+                                fit: BoxFit.fill,
+                              ),
+                            )),
+                        Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'Sake Nigirl',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ),
+                            Text(r'$50'),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(right: 8, top: 8),
+                              child: Align(
+                                alignment: Alignment.centerRight,
+                                child: Icon(Icons.help),
+                              ),
+                            ),
+                            Text('Add To Cart'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )),
           ],
         ),
       ),
+      backgroundColor: CustomColors.appBarColor,
     );
   }
 }

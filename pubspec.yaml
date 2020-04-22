@@ -47,6 +47,7 @@ flutter:
    - images/makisushi.jpg
    - images/sushi2.jpg
    - images/sushi3.jpg
+   - images/sushisoup.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

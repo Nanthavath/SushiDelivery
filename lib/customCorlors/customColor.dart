@@ -8,5 +8,5 @@ class CustomColors {
   static const Color appBarColor = Color(0xFF243448);
   static const Color buttonColorShoose = Color(0xFFE2434B);
   static const Color buttonColor = Color(0xFF2D4059);
-  static const Color cardColor = Color(0xFF5A636A);
+  static const Color cardColor = Color(0xFF6C7885);
 }
