@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:sushi_delivery/customIcons/custom_icons_icons.dart';
 import 'package:sushi_delivery/customIcons/socicons_icons.dart';
 import 'package:sushi_delivery/customCorlors/customColor.dart';
 
@@ -19,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
       key: _scaffordKey,
       drawer: Drawer(),
       appBar: AppBar(
-        backgroundColor: CustomColors.black,
+        backgroundColor: CustomColors.appBarColor,
         leading: IconButton(
           icon: Icon(Icons.add_box),
           onPressed: () {
@@ -32,18 +33,72 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SafeArea(
-        child: Center(
-          child: Container(
-            height: 200,
-            width: 200,
-            child: IconButton(
-                icon: Icon(
-                  Socicons.spotify,
-                  color: Colors.green,
-                  size: 200,
-                ),
-                onPressed: null),
-          ),
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 50,
+              color: CustomColors.appBarColor,
+              child: ListView(
+                padding: EdgeInsets.all(8),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sushi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Bitter',
+                      ),
+                    ),
+                    color: CustomColors.buttonColorShoose,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sushi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Bitter',
+                      ),
+                    ),
+                    color: CustomColors.buttonColor,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sushi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Bitter',
+                      ),
+                    ),
+                    color: CustomColors.buttonColor,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sushi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Bitter',
+                      ),
+                    ),
+                    color: CustomColors.buttonColor,
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
