@@ -182,10 +182,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Container(
-                      
                       height: 15,
                       width: 20,
-                      
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.red,
@@ -204,6 +202,37 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: CustomColors.appBarColor,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              MdiIcons.circleDouble,
+              color: Colors.white,
+              size: 25,
+            ),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              MdiIcons.heart,
+              color: CustomColors.heartColor,
+              size: 25,
+            ),
+            title: Text('Like'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: CustomColors.heartColor,
+              size: 25,
+            ),
+            title: Text('Like'),
           ),
         ],
       ),
