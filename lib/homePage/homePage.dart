@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'package:sushi_delivery/customCorlors/customColor.dart';
 
@@ -26,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               height: 120,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage('images/makisushi.jpg'),
                   fit: BoxFit.fill,
@@ -151,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: CustomColors.appBarColor,
       key: _scaffordKey,
       drawer: Drawer(),
       appBar: AppBar(
@@ -161,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _scaffordKey.currentState.openDrawer();
           },
         ),
-        title: Text('Home'),
+       
         actions: <Widget>[
           IconButton(icon: Icon(Icons.add_alert), onPressed: () {})
         ],
@@ -176,16 +178,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(8),
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  RaisedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Sushi',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Bitter',
-                      ),
+                  Container(
+                    decoration: BoxDecoration(
+                      
+                      borderRadius: BorderRadius.circular(8)
                     ),
-                    color: CustomColors.buttonColorShoose,
+                    child: RaisedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Sushi',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Bitter',
+                        ),
+                      ),
+                      color: CustomColors.buttonColorShoose,
+                    ),
                   ),
                   SizedBox(
                     width: 15,
@@ -266,8 +274,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+
             Expanded(
-                child: Column(
+                child: ListView(
               children: <Widget>[
                 Container(
                   height: 100,
@@ -279,8 +288,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       children: <Widget>[
                         Container(
-                            margin: EdgeInsets.all(5),
-                            width: 100,
+                           margin: EdgeInsets.all(5),
+                            width: 90,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               image: DecorationImage(
@@ -288,17 +297,72 @@ class _MyHomePageState extends State<MyHomePage> {
                                 fit: BoxFit.fill,
                               ),
                             )),
-                        Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'Sake Nigirl',
-                                style: TextStyle(fontSize: 18),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(top: 8, left: 8, bottom: 8),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Sake Nigirl           ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
                               ),
-                            ),
-                            Text(r'$50'),
-                          ],
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 1,
+                              ),
+                              Text(
+                                r'$50',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -307,10 +371,248 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: EdgeInsets.only(right: 8, top: 8),
                               child: Align(
                                 alignment: Alignment.centerRight,
-                                child: Icon(Icons.help),
+                                child: Icon(
+                                  MdiIcons.heart,
+                                  color: CustomColors.heartColor,
+                                ),
                               ),
                             ),
-                            Text('Add To Cart'),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'Add To Cart',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                Container(
+                  height: 100,
+                  color: CustomColors.appBarColor,
+                  child: Card(
+                    color: CustomColors.cardColor,
+                    margin: EdgeInsets.all(10),
+                    elevation: 5,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                           margin: EdgeInsets.all(5),
+                            width: 90,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                image: AssetImage('images/makisushi.jpg'),
+                                fit: BoxFit.fill,
+                              ),
+                            )),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(top: 8, left: 8, bottom: 8),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Sake Nigirl           ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 1,
+                              ),
+                              Text(
+                                r'$50',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(right: 8, top: 8),
+                              child: Align(
+                                alignment: Alignment.centerRight,
+                                child: Icon(
+                                  MdiIcons.heart,
+                                  color: CustomColors.heartColor,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'Add To Cart',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                Container(
+                  height: 100,
+                  color: CustomColors.appBarColor,
+                  child: Card(
+                    color: CustomColors.cardColor,
+                    margin: EdgeInsets.all(10),
+                    elevation: 5,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                           margin: EdgeInsets.all(5),
+                            width: 90,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                image: AssetImage('images/makisushi.jpg'),
+                                fit: BoxFit.fill,
+                              ),
+                            )),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(top: 8, left: 8, bottom: 8),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Sake Nigirl           ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Icon(
+                                      MdiIcons.star,
+                                      size: 15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 1,
+                              ),
+                              Text(
+                                r'$50',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: CustomColors.textColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(right: 8, top: 8),
+                              child: Align(
+                                alignment: Alignment.centerRight,
+                                child: Icon(
+                                  MdiIcons.heart,
+                                  color: CustomColors.heartColor,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'Add To Cart',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.grey),
+                            ),
                           ],
                         ),
                       ],
@@ -322,7 +624,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      backgroundColor: CustomColors.appBarColor,
+      
     );
   }
 }
