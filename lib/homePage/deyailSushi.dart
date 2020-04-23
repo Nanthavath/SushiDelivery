@@ -9,7 +9,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Image.asset('images/sushi3,jpg'),
+      //body: Image.asset('images/sushi3,jpg'),
     );
   }
 }
