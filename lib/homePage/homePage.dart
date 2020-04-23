@@ -165,21 +165,44 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Stack(
-              children: <Widget>[
-                Icon(
-                  MdiIcons.shopping,
-                  size: 20,
-                ),
-                Text(
-                  '5',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
+            padding: const EdgeInsets.all(15.0),
+            child: Container(
+              height: 10,
+              width: 28,
+              //color: Colors.green,
+              child: Stack(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Icon(
+                      MdiIcons.shopping,
+                      size: 18,
+                    ),
                   ),
-                ),
-              ],
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      
+                      height: 15,
+                      width: 20,
+                      
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.red,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '2',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
