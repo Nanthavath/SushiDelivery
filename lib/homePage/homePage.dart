@@ -158,14 +158,30 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: CustomColors.appBarColor,
         leading: IconButton(
-          icon: Icon(Icons.add_box),
+          icon: Icon(MdiIcons.menu),
           onPressed: () {
             _scaffordKey.currentState.openDrawer();
           },
         ),
-       
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.add_alert), onPressed: () {})
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Stack(
+              children: <Widget>[
+                Icon(
+                  MdiIcons.shopping,
+                  size: 20,
+                ),
+                Text(
+                  '5',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
       body: SafeArea(
@@ -178,27 +194,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(8),
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      
-                      borderRadius: BorderRadius.circular(8)
+                  RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                    child: RaisedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sushi',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Bitter',
-                        ),
+                    onPressed: () {},
+                    child: Text(
+                      'Sushi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Bitter',
                       ),
-                      color: CustomColors.buttonColorShoose,
                     ),
+                    color: CustomColors.buttonColorShoose,
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 12,
                   ),
                   RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                     onPressed: () {},
                     child: Text(
                       'Sushi',
@@ -210,9 +226,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: CustomColors.buttonColor,
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 12,
                   ),
                   RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                     onPressed: () {},
                     child: Text(
                       'Sushi',
@@ -224,9 +243,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: CustomColors.buttonColor,
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 12,
                   ),
                   RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                     onPressed: () {},
                     child: Text(
                       'Sushi',
@@ -274,7 +296,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-
             Expanded(
                 child: ListView(
               children: <Widget>[
@@ -288,7 +309,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       children: <Widget>[
                         Container(
-                           margin: EdgeInsets.all(5),
+                            margin: EdgeInsets.all(5),
                             width: 90,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -391,7 +412,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-
                 Container(
                   height: 100,
                   color: CustomColors.appBarColor,
@@ -402,7 +422,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       children: <Widget>[
                         Container(
-                           margin: EdgeInsets.all(5),
+                            margin: EdgeInsets.all(5),
                             width: 90,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -505,7 +525,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-
                 Container(
                   height: 100,
                   color: CustomColors.appBarColor,
@@ -516,7 +535,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       children: <Widget>[
                         Container(
-                           margin: EdgeInsets.all(5),
+                            margin: EdgeInsets.all(5),
                             width: 90,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -624,7 +643,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      
     );
   }
 }
