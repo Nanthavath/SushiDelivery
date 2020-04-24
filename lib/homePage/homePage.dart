@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'package:sushi_delivery/customCorlors/customColor.dart';
-import 'package:sushi_delivery/homePage/deyailSushi.dart';
+import 'package:sushi_delivery/homePage/detailSushi.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
