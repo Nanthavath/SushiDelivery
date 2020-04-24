@@ -22,39 +22,46 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Card(
         color: CustomColors.cardColor,
         elevation: 5,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Container(
-              height: 120,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                  image: AssetImage('images/makisushi.jpg'),
-                  fit: BoxFit.fill,
+        child: InkWell(
+          onTap: () {
+            MaterialPageRoute materialPageRoute = MaterialPageRoute(
+                builder: (BuildContext context) => DetailPage());
+            Navigator.of(context).push(materialPageRoute);
+          },
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage('images/makisushi.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              'Sushi Dai Tsujili',
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Bitter',
-                fontSize: 14,
+              SizedBox(
+                height: 5,
               ),
-            ),
-            Text(
-              r'$25',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontFamily: 'Bitter',
+              Text(
+                'Sushi Dai Tsujili',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Bitter',
+                  fontSize: 14,
+                ),
               ),
-            ),
-          ],
+              Text(
+                r'$25',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontFamily: 'Bitter',
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -479,109 +486,116 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: CustomColors.cardColor,
                     margin: EdgeInsets.all(10),
                     elevation: 5,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                            margin: EdgeInsets.all(5),
-                            width: 90,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                image: AssetImage('images/makisushi.jpg'),
-                                fit: BoxFit.fill,
-                              ),
-                            )),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(top: 8, left: 8, bottom: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                    child: InkWell(
+                      onTap: () {
+                        MaterialPageRoute materialPageRoute = MaterialPageRoute(
+                            builder: (BuildContext context) => DetailPage());
+                        Navigator.of(context).push(materialPageRoute);
+                      },
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              margin: EdgeInsets.all(5),
+                              width: 90,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                  image: AssetImage('images/makisushi.jpg'),
+                                  fit: BoxFit.fill,
+                                ),
+                              )),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 8, left: 8, bottom: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Sake Nigirl           ',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: CustomColors.textColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 1,
+                                ),
+                                Text(
+                                  r'$50',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: CustomColors.textColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
-                              Text(
-                                'Sake Nigirl           ',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: CustomColors.textColor,
+                              Padding(
+                                padding: EdgeInsets.only(right: 8, top: 8),
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Icon(
+                                    MdiIcons.heart,
+                                    color: CustomColors.heartColor,
+                                  ),
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 1,
+                                height: 20,
                               ),
                               Text(
-                                r'$50',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: CustomColors.textColor,
-                                ),
+                                'Add To Cart',
+                                style:
+                                    TextStyle(fontSize: 16, color: Colors.grey),
                               ),
                             ],
                           ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 8, top: 8),
-                              child: Align(
-                                alignment: Alignment.centerRight,
-                                child: Icon(
-                                  MdiIcons.heart,
-                                  color: CustomColors.heartColor,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              'Add To Cart',
-                              style:
-                                  TextStyle(fontSize: 16, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -592,109 +606,116 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: CustomColors.cardColor,
                     margin: EdgeInsets.all(10),
                     elevation: 5,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                            margin: EdgeInsets.all(5),
-                            width: 90,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                image: AssetImage('images/makisushi.jpg'),
-                                fit: BoxFit.fill,
-                              ),
-                            )),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(top: 8, left: 8, bottom: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                    child: InkWell(
+                      onTap: () {
+                        MaterialPageRoute materialPageRoute = MaterialPageRoute(
+                            builder: (BuildContext context) => DetailPage());
+                        Navigator.of(context).push(materialPageRoute);
+                      },
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                              margin: EdgeInsets.all(5),
+                              width: 90,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                  image: AssetImage('images/makisushi.jpg'),
+                                  fit: BoxFit.fill,
+                                ),
+                              )),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 8, left: 8, bottom: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Sake Nigirl           ',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: CustomColors.textColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                    Align(
+                                      child: Icon(
+                                        MdiIcons.star,
+                                        size: 15,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 1,
+                                ),
+                                Text(
+                                  r'$50',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: CustomColors.textColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
-                              Text(
-                                'Sake Nigirl           ',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: CustomColors.textColor,
+                              Padding(
+                                padding: EdgeInsets.only(right: 8, top: 8),
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Icon(
+                                    MdiIcons.heart,
+                                    color: CustomColors.heartColor,
+                                  ),
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                      color: Colors.yellow,
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Icon(
-                                      MdiIcons.star,
-                                      size: 15,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 1,
+                                height: 20,
                               ),
                               Text(
-                                r'$50',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: CustomColors.textColor,
-                                ),
+                                'Add To Cart',
+                                style:
+                                    TextStyle(fontSize: 16, color: Colors.grey),
                               ),
                             ],
                           ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 8, top: 8),
-                              child: Align(
-                                alignment: Alignment.centerRight,
-                                child: Icon(
-                                  MdiIcons.heart,
-                                  color: CustomColors.heartColor,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              'Add To Cart',
-                              style:
-                                  TextStyle(fontSize: 16, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

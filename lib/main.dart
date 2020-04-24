@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sushi_delivery/homePage/homePage.dart';
+import 'package:sushi_delivery/splashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //theme: ThemeData(primarySwatch: barColor),
-      home: MyHomePage(),
+      home: SplashPage(),
     );
   }
 }

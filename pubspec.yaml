@@ -25,6 +25,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   material_design_icons_flutter: ^4.0.5145
+  splashscreen: ^1.2.0
+
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +50,7 @@ flutter:
    - images/sushi2.jpg
    - images/sushi3.jpg
    - images/sushisoup.jpg
+   - images/splash.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

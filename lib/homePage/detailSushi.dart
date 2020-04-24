@@ -8,6 +8,19 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+
+  int couter=0;
+  void counters(){
+    setState(() {
+      couter++;
+    });
+  }
+
+  void deleteCounter(){
+    setState(() {
+      couter--;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,7 +169,9 @@ class _DetailPageState extends State<DetailPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      deleteCounter();;
+                    },
                     child: Text(
                       '-',
                       style: TextStyle(
@@ -170,7 +185,7 @@ class _DetailPageState extends State<DetailPage> {
                     width: 40,
                   ),
                   Text(
-                    'x2',
+                    'x$couter',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -185,7 +200,9 @@ class _DetailPageState extends State<DetailPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      counters();
+                    },
                     child: Text(
                       '+',
                       style: TextStyle(
