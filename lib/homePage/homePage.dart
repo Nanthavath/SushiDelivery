@@ -177,7 +177,6 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               height: 10,
               width: 28,
-              //color: Colors.green,
               child: Stack(
                 children: <Widget>[
                   Align(

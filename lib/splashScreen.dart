@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         children: <Widget>[
           Container(
-            color: Colors.red,
+            
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
